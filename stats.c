@@ -9,8 +9,8 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c   
+ * @brief file to invoke stats.h header file to invoke the functions and proceed with results
  *
  * <Add Extended Description Here>
  *

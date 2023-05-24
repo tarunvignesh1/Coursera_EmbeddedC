@@ -9,10 +9,9 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Function declarations and definitions related to statistics manipulations.
  *
- * <Add Extended Description Here>
  *
  * @author <Tarun Vignesh Selvabalaji>
  * @date <24-05-2023>
@@ -22,6 +21,8 @@
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
+
+
 
 /**
  * @brief <Add Brief Description of Function Here>
