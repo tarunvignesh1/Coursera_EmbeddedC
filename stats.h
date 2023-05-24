@@ -14,8 +14,8 @@
  *
  * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Tarun Vignesh Selvabalaji>
+ * @date <24-05-2023>
  *
  */
 #ifndef __STATS_H__
