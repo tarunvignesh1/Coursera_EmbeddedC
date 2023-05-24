@@ -20,22 +20,46 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
+/// @param values pointer to n-array
+/// @return No return value
+void print_statistics(unsigned char* values);
 
 
+/// @brief Given an array of data and a length, prints the array to the screen
+/// @param values 
+/// @param length 
+void print_array(unsigned char* values,int length);
 
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
+/// @brief Given an array of data and a length, returns the median value
+/// @param values
+/// @param length
+/// @return median value in float
+float find_median(unsigned char * values,int length);
+
+/// @brief Given an array of data and a length, returns the mean
+/// @param values 
+/// @param length
+/// @return mean value in float
+float find_mean(unsigned char * values,int length);
+
+/// @brief Given an array of data and a length, returns the maximum
+/// @param values 
+/// @param length 
+/// @return in int
+int find_maximum(unsigned char * values,int length);
+
+/// @brief Given an array of data and a length, returns the minimum
+/// @param values 
+/// @param length 
+/// @return in int
+int find_minimum(unsigned char * values,int length);
+
+/// @brief Given an array of data and a length, sorts the array from largest to smallest.  
+/// (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+/// @param values 
+/// @param length 
+void sort_array(unsigned char * values, int length);
 
 
 #endif /* __STATS_H__ */
