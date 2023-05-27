@@ -86,7 +86,7 @@ void sort_array(unsigned char* values, int length){
 }
 
 void print_statistics(unsigned char* values,int length){
-    printf("Printing Array Statistics.............\n");
+    printf("\n......\n..........\nPrinting Array Statistics.............\n");
     printf("mean value             = %f \n",find_mean(values,length));
     printf("Median value           = %f \n",find_median(values,length));
     printf("Minimum array value    = %d \n",find_minimum(values,length));
