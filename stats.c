@@ -41,6 +41,7 @@ int main() {
   printf("sorting function.....\n");
   sort_array(test,SIZE);
   print_array(test,SIZE);
+  print_statistics(test,SIZE);
 
 return 0;
 }

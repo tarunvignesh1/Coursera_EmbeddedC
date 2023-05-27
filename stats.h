@@ -31,7 +31,7 @@ void swap(unsigned char* a, unsigned char* b);
 /// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
 /// @param values pointer to n-array
 /// @return No return value
-void print_statistics(unsigned char* values);
+void print_statistics(unsigned char* values,int length);
 
 
 /// @brief Given an array of data and a length, prints the array to the screen
@@ -71,7 +71,7 @@ void sort_array(unsigned char * values, int length);
 
 
 
-//definitions
+//---------------------------Functions Definitions-----------------------------------------
 
 void print_array(unsigned char* values, int length){
 
@@ -83,6 +83,15 @@ void print_array(unsigned char* values, int length){
 void sort_array(unsigned char* values, int length){
     int high = length-1;
     quicksort(values, 0, high);
+}
+
+void print_statistics(unsigned char* values,int length){
+    printf("Printing Array Statistics.............\n");
+    printf("mean value             = %f \n",find_mean(values,length));
+    printf("Median value           = %f \n",find_median(values,length));
+    printf("Minimum array value    = %d \n",find_minimum(values,length));
+    printf("Maximum array value    = %d \n",find_maximum(values,length));
+    printf("Statistics of array done...............\n");
 }
 
 
@@ -108,11 +117,23 @@ int find_minimum(unsigned char* values, int length){
 
 
 float find_median(unsigned char* values, int length){
-    return 0;
+    int n=length;
+    if(n%2==1)
+        return *(values+n/2);
+    else{
+        return (*(values+n/2-1)+*(values+n/2))/2;
+    }
 }
 
-//function for quicksort 
+float find_mean(unsigned char* values, int length){
+    int sum=0;
+    for(int i=0;i<length;i++){
+        sum+=*(values+i);
+    }
+    return sum/2;
+}
 
+//----------------function for quicksort---------------------- 
 // Function to swap two elements
 void swap(unsigned char* a, unsigned char* b) {
     unsigned char temp = *a;
