@@ -74,14 +74,8 @@ void print_array(unsigned char* values, int length){
     }
 }
 
-//compare function for qsort from stdlib
-int compare(const void* a, const void* b) {
-    return (*(int*)a - *(int*)b);
-}
-
-
 void sort_array(unsigned char* values, int length){
-    qsort(values,length,sizeof(char),compare);
+    quicksort(values, 0, length-1);
 }
 
 
@@ -110,5 +104,40 @@ float find_median(unsigned char* values, int length){
     return 0;
 }
 
+//function for quicksort 
+
+// Function to swap two elements
+void swap(unsigned char* a, unsigned char* b) {
+    unsigned char temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Partition function for Quicksort
+int partition(unsigned char* array, int low, int high) {
+    unsigned char pivot = array[high];
+    int i = low - 1;
+
+    for (int j = low; j < high; j++) {
+        if (array[j] <= pivot) {
+            i++;
+            swap(&array[i], &array[j]);
+        }
+    }
+
+    swap(&array[i + 1], &array[high]);
+
+    return i + 1;
+}
+
+// Quicksort function
+void quicksort(unsigned char* array, int low, int high) {
+    if (low < high) {
+        int pivotIndex = partition(array, low, high);
+
+        quicksort(array, low, pivotIndex - 1);
+        quicksort(array, pivotIndex + 1, high);
+    }
+}
 
 #endif /* __STATS_H__ */
