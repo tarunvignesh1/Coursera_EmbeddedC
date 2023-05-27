@@ -20,6 +20,7 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
+#include "stdio.h"
 /// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
 /// @param values pointer to n-array
 /// @return No return value
