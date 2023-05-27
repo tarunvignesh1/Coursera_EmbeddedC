@@ -37,6 +37,11 @@ int main() {
 
   print_array(test,SIZE);
 
+  //testing sort function
+  printf("sorting function.....\n");
+  sort_array(test,SIZE);
+  print_array(test,SIZE);
+
 return 0;
 }
 
