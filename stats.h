@@ -21,6 +21,7 @@
 #define __STATS_H__
 
 #include "stdio.h"
+#include "stdlib.h"
 /// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
 /// @param values pointer to n-array
 /// @return No return value
@@ -71,6 +72,42 @@ void print_array(unsigned char* values, int length){
     for(int i=0;i<length;i++){
         printf("%d ",*(values+i));
     }
+}
+
+//compare function for qsort from stdlib
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+
+void sort_array(unsigned char* values, int length){
+    qsort(values,length,sizeof(char),compare);
+}
+
+
+int find_maximum(unsigned char* values, int length){
+    int max = *values;
+
+    for(int i=1;i<length;i++){
+        if(max < *(values+i))
+            max = *(values+i);
+    }
+    return max;
+}
+
+int find_minimum(unsigned char* values, int length){
+    int min = *values;
+
+    for(int i=1;i<length;i++){
+        if(min < *(values+i))
+            min = *(values+i);
+    }
+    return min;
+}
+
+
+int find_median(unsigned char* values, int length){
+    return 0;
 }
 
 
