@@ -68,7 +68,7 @@ void sort_array(unsigned char * values, int length);
 void print_array(unsigned char* values, int length){
 
     for(int i=0;i<length;i++){
-        printf("%c ",values[i]);
+        printf("%c ",*(values+i));
     }
 }
 
