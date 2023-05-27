@@ -81,7 +81,8 @@ void print_array(unsigned char* values, int length){
 }
 
 void sort_array(unsigned char* values, int length){
-    quicksort(values, 0, int(length-1));
+    int high = int(length-1);
+    quicksort(values, 0, high);
 }
 
 
