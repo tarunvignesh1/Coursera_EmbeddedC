@@ -62,4 +62,15 @@ int find_minimum(unsigned char * values,int length);
 void sort_array(unsigned char * values, int length);
 
 
+
+//definitions
+
+void print_array(unsigned char* values, int length){
+
+    for(int i=0;i<length;i++){
+        printf("%c ",values[i]);
+    }
+}
+
+
 #endif /* __STATS_H__ */
