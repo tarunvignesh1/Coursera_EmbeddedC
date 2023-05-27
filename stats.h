@@ -106,7 +106,7 @@ int find_minimum(unsigned char* values, int length){
 }
 
 
-int find_median(unsigned char* values, int length){
+float find_median(unsigned char* values, int length){
     return 0;
 }
 
