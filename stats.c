@@ -38,7 +38,7 @@ int main() {
   print_array(test,SIZE);
 
   //testing sort function
-  printf("sorting function.....\n");
+  printf("\n Array after sorting.....\n");
   sort_array(test,SIZE);
   print_array(test,SIZE);
   print_statistics(test,SIZE);

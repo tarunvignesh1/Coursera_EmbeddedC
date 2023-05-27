@@ -109,7 +109,7 @@ int find_minimum(unsigned char* values, int length){
     int min = *values;
 
     for(int i=1;i<length;i++){
-        if(min < *(values+i))
+        if(min > *(values+i))
             min = *(values+i);
     }
     return min;
