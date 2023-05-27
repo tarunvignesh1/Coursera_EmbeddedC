@@ -22,6 +22,12 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+
+/// Utility functions declarations
+void quicksort(unsigned char* array, int low, int high);
+int partition(unsigned char* array, int low, int high);
+void swap(unsigned char* a, unsigned char* b);
+
 /// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
 /// @param values pointer to n-array
 /// @return No return value
@@ -75,7 +81,7 @@ void print_array(unsigned char* values, int length){
 }
 
 void sort_array(unsigned char* values, int length){
-    quicksort(values, 0, length-1);
+    quicksort(values, 0, int(length-1));
 }
 
 
