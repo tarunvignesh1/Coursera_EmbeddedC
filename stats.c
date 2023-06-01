@@ -9,8 +9,8 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c   
+ * @brief file to invoke stats.h header file to invoke the functions and proceed with results
  *
  * <Add Extended Description Here>
  *
@@ -27,7 +27,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
+int main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
@@ -35,9 +35,15 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+  print_array(test,SIZE);
 
+  //testing sort function
+  printf("\n Array after sorting.....\n");
+  sort_array(test,SIZE);
+  print_array(test,SIZE);
+  print_statistics(test,SIZE);
+
+return 0;
 }
 
 /* Add other Implementation File Code Here */
