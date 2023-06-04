@@ -1,6 +1,3 @@
-# EmbeddedC
-Implementing and learning Embedded C 
-
 # Module 1 Assignment Documentation
 
 # Statistics Manipulation Functions Documentation
