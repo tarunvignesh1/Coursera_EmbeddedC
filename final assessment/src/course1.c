@@ -18,10 +18,10 @@
  */
 
 #include <stdint.h>
-#include "course1.h"
+#include "../include/common/course1.h"
 #include "platform.h"
 #include "memory.h"
-#include "data.h"
+#include "../include/common/data.h"
 #include "stats.h"
 
 int8_t test_data1() {
