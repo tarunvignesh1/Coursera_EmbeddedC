@@ -1,4 +1,4 @@
-# Selvabalaji_Coursera
+# Coursera EmbeddedC
 Implementing and learning Embedded C 
 
 ## Assignment.
