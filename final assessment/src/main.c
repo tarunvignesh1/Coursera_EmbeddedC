@@ -15,7 +15,7 @@
  * are not to change any of the code, they are instead supposed to compile
  * these files with their makefile.
  *
- * @author Tarun Vig nesh Selvabalaji
+ * @author Tarun Vignesh Selvabalaji
  * @date June 7,2023
  *
  */

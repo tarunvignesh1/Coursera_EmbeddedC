@@ -22,51 +22,81 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+/* Add Your Declarations and Function Comments here */ 
 
-/// Utility functions declarations
-void quicksort(unsigned char* array, int low, int high);
-int partition(unsigned char* array, int low, int high);
-void swap(unsigned char* a, unsigned char* b);
+typedef struct stats{
+    uint8_t *numArray;
+    uint8_t arrayLength;
+    uint8_t median;
+    uint8_t mean;
+    uint8_t max;
+    uint8_t min;
+} stat;
 
-/// @brief A function that prints the statistics of an array including minimum, maximum, mean, and median
-/// @param values pointer to n-array
-/// @return No return value
-void print_statistics(unsigned char* values,int length);
+/**
+ * @brief Print out all the statistics related to the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * 
+ * @return Void()
+ */
+void print_statistics(uint8_t *arrayPtr, uint8_t arrayLength);
 
 
-/// @brief Given an array of data and a length, prints the array to the screen
-/// @param values 
-/// @param length 
-void print_array(unsigned char* values,int length);
+/**
+ * @brief Prints the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * 
+ * @return Void()
+ */
+void print_array(uint8_t *arrayPtr, uint8_t arrayLength);
 
-/// @brief Given an array of data and a length, returns the median value
-/// @param values
-/// @param length
-/// @return median value in float
-float find_median(unsigned char * values,int length);
+/**
+ * @brief Sorts the array inplace from largest (index 0) to smallest (index n-1)
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ */
+void sort_array(uint8_t *arrayPtr, uint8_t arrayLength);
 
-/// @brief Given an array of data and a length, returns the mean
-/// @param values 
-/// @param length
-/// @return mean value in float
-float find_mean(unsigned char * values,int length);
+/**
+ * @brief Given an array pointer and length of array, returns the minimum value in the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * @return uint8_t minimum value in array
+ */
+uint8_t find_min(uint8_t *arrayPtr, uint8_t arrayLength);
 
-/// @brief Given an array of data and a length, returns the maximum
-/// @param values 
-/// @param length 
-/// @return in int
-int find_maximum(unsigned char * values,int length);
+/**
+ * @brief Given an array pointer and length of array, returns the maximum value in the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * @return uint8_t maximum value in array
+ */
+uint8_t find_max(uint8_t *arrayPtr, uint8_t arrayLength);
 
-/// @brief Given an array of data and a length, returns the minimum
-/// @param values 
-/// @param length 
-/// @return in int
-int find_minimum(unsigned char * values,int length);
+/**
+ * @brief Given an array pointer and length of array, returns the average value of the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * @return uint8_t average value in array
+ */
+uint8_t find_mean(uint8_t *arrayPtr, uint8_t arrayLength);
 
-/// @brief Given an array of data and a length, sorts the array from largest to smallest.  
-/// (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
-/// @param values 
-/// @param length 
-void sort_array(unsigned char * values, int length);
+/**
+ * @brief Given an array pointer and length of array, returns the median value of the array
+ * 
+ * @param arrayPtr Pointer to the array of data
+ * @param arrayLength Number of elements in the array
+ * @return uint8_t median value in array
+ */
+uint8_t find_median(uint8_t *arrayPtr, uint8_t arrayLength);
+
 
 #endif /* __STATS_H__ */
