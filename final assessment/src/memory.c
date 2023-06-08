@@ -21,6 +21,7 @@
  *
  */
 #include "memory.h"
+#include <stdint.h>
 
 /***********************************************************
  Function Definitions
